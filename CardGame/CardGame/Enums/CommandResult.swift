@@ -8,10 +8,9 @@
 
 import Foundation
 
-enum GameResult: Equatable {
-    
+enum CommandResult: Equatable {
     case reset(remain: Int)
     case shuffle(remain: Int)
     case draw(card: Card?, remain: Int)
-    
+    case count(remain: Int)
 }

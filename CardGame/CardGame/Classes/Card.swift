@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Card {
+class Card: CustomStringConvertible, Equatable, GameElement {
     private let suit: Suit
     private let rank: Rank
     
@@ -25,22 +25,38 @@ class Card {
         self.rank = rank
     }
     
-}
-// - MARK: - Nested Enum (Suit, Rank)
-extension Card {
-    enum Suit: Character, CustomStringConvertible, CaseIterable {
+    
+    enum Suit: Character, CustomStringConvertible, CaseIterable, Comparable {
         case spades = "♠️"
         case hearts = "♥️"
         case diamonds = "♦️"
         case clubs = "♣️"
         
+        var ranking: Int {
+            // ♣️ < ♦️ < ♥️ < ♠️
+            switch self {
+            case .spades:
+                return 1
+            case .hearts:
+                return 2
+            case .diamonds:
+                return 3
+            case .clubs:
+                return 4
+            }
+        }
+        
         var description: String {
             return "\(rawValue)"
         }
         
+        static func < (lhs: Card.Suit, rhs: Card.Suit) -> Bool {
+            return lhs.ranking > rhs.ranking
+        }
+        
     }
     
-    enum Rank: Int, CustomStringConvertible, CaseIterable {
+    enum Rank: Int, CustomStringConvertible, CaseIterable, Comparable {
         case ace = 1
         case two,three,four,five,six,seven,eight,nine,ten
         case jack,queen,king
@@ -59,23 +75,55 @@ extension Card {
                 return "K"
             }
         }
+        
+        var score: Int {
+            return (self.rawValue + Rank.allCases.count-2) % Rank.allCases.count
+        }
+        
+        static func < (lhs: Card.Rank, rhs: Card.Rank) -> Bool {
+            return lhs.score < rhs.score
+        }
+        
     }
-}
-
-// - MARK: - + CustomStringConvertible
-extension Card: CustomStringConvertible {
+    
     var description: String {
-        return "\(self.suit)\(self.rank)"
+        return "\t\(self.suit)\(self.rank)"
     }
+    
+    
 }
-
-// - MARK: - + Equatable
-extension Card: Equatable {
+// - MARK: - Comparable
+extension Card: Comparable {
+    
     static func == (lhs: Card, rhs: Card) -> Bool {
         let sameSuit = lhs.suit == rhs.suit
         let sameRank = lhs.rank == rhs.rank
         return sameSuit && sameRank
     }
+    
+    static func < (lhs: Card, rhs: Card) -> Bool {
+        let higherRank  = lhs.rank < rhs.rank
+        let higherSuit = lhs.rank == rhs.rank && lhs.suit < rhs.suit
+        return higherRank || higherSuit
+    }
+    
+}
+// - MARK: - Pairable
+extension Card: Pairable {
+    
+    func isPair(with other: Card) -> Bool {
+        return self.rank == other.rank
+    }
+    
+}
+// - MARK: - Linkable
+extension Card: Linkable {
+    
+    func isLink(with other: Card) -> Bool {
+        let diff = abs(self.rank.rawValue - other.rank.rawValue) % 11
+        return  diff == 1
+    }
+    
 }
 /*==============================================================================
  
