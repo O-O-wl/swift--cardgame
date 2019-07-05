@@ -8,11 +8,20 @@
 
 import Foundation
 
-let heart10 = Card.init(suit: .hearts, rank: .ten)
-print(heart10)
-if let spadeAce = Card(suit: "♠️", rank: 1) {
-     print(spadeAce)
+func main() throws {
+    var game = CardGame()
+    while true {
+        guard let menuNumber = InputView.getMenuNumber() else {
+           throw Exception.wrongFormat
+        }
+        let result = try game.run(menuNumber: menuNumber)
+        OutputView.showResult(result)
+    }
 }
 
 
-
+do {
+    try main()
+}catch {
+    print(error.localizedDescription)
+}

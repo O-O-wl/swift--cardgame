@@ -8,13 +8,9 @@
 
 import Foundation
 
-class Card: CustomStringConvertible {
+class Card {
     private let suit: Suit
     private let rank: Rank
-    
-    var description: String {
-        return "\(suit)\(rank)"
-    }
     
     init(suit: Suit, rank: Rank) {
         self.suit = suit
@@ -28,11 +24,11 @@ class Card: CustomStringConvertible {
         self.suit = suit
         self.rank = rank
     }
-
+    
 }
 // - MARK: - Nested Enum (Suit, Rank)
 extension Card {
-    enum Suit: Character, CustomStringConvertible {
+    enum Suit: Character, CustomStringConvertible, CaseIterable {
         case spades = "♠️"
         case hearts = "♥️"
         case diamonds = "♦️"
@@ -44,7 +40,7 @@ extension Card {
         
     }
     
-    enum Rank: Int, CustomStringConvertible,CaseIterable {
+    enum Rank: Int, CustomStringConvertible, CaseIterable {
         case ace = 1
         case two,three,four,five,six,seven,eight,nine,ten
         case jack,queen,king
@@ -64,7 +60,22 @@ extension Card {
             }
         }
     }
-    
+}
+
+// - MARK: - + CustomStringConvertible
+extension Card: CustomStringConvertible {
+    var description: String {
+        return "\(self.suit)\(self.rank)"
+    }
+}
+
+// - MARK: - + Equatable
+extension Card: Equatable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        let sameSuit = lhs.suit == rhs.suit
+        let sameRank = lhs.rank == rhs.rank
+        return sameSuit && sameRank
+    }
 }
 /*==============================================================================
  
