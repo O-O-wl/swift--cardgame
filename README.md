@@ -1,57 +1,24 @@
-# 진행 방법
+# CardGame 카드게임
+---
+객체에게서 데이터를 가져오는 것 보다는
+**객체가 직접 데이터로 연산을 하게끔** 외부에서 입력을 넣어준 뒤 결과값을 반환 받게하였다.
+객체의 데이터의 출력에 대해서는, `OutputView`가 **클로저의 형태로 로직을 넘겨**, 데이터를 공개하지 않고 출력을 할 수 있었다.
 
-- 카드게임에 대한 요구사항을 파악한다.
-- 요구사항에 대한 구현을 완료한 후 자신의 github 아이디에 해당하는 브랜치에 Pull Request(이하 PR)를 통해 코드 리뷰 요청을 한다.
-- 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-- 모든 피드백을 완료하면 다음 단계를 도전하고 앞의 과정을 반복한다.
+ex)
+대소비교를 하는 것을 데이터를 가져오기 보다는 해당 인스턴스와 다른 인스턴스와의 비교를 내부에서 하고 비교연산의 결과만 반환하게 하였다.
 
-# 코드 리뷰 과정
-> 저장소 브랜치에 자신의 github 아이디에 해당하는 브랜치가 존재해야 한다.
->
-> 자신의 github 아이디에 해당하는 브랜치가 있는지 확인한다.
+---
 
-1. 자신의 github 아이디에 해당하는 브랜치가 없는 경우 브랜치 생성 요청 채널을 통해 브랜치 생성을 요청한다.
-프로젝트를 자신의 계정으로 fork한다. 저장소 우측 상단의 fork 버튼을 활용한다.
+### 실행 영상
 
-2. fork한 프로젝트를 자신의 컴퓨터로 clone한다.
-```
-git clone https://github.com/{본인_아이디}/{저장소 아이디}
-ex) https://github.com/godrm/swift-cardgame
-```
 
-3. clone한 프로젝트 이동
-```
-cd {저장소 아이디}
-ex) cd swift-cardgame
-```
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/39197978/60882500-003e2900-a283-11e9-8ea0-ed439e56f6c6.gif)
+## 흐름
+1. `GameInputView`로 부터 사용자의 입력  **`mode`- 게임종류 , `entry` - 인원수**
 
-4. 본인 아이디로 브랜치를 만들기 위한 checkout
-```
-git checkout -t origin/본인_아이디
-ex) git checkout -t origin/godrm
-```
+2. `Setting(DTO)` 객체 생성 
+3. `Game` 객체 생성 - `Setting`주입
+    - 인원수만큼의 플레이어생성,
 
-5. commit
-```
-git status //확인
-git rm 파일명 //삭제된 파일
-git add 파일명(or * 모두) // 추가/변경 파일
-git commit -m "메세지" // 커밋
-```
 
-6. 본인 원격 저장소에 올리기
-```
-git push origin 본인_아이디
-ex) git push origin godrm
-```
 
-7. pull request
-8. pull request는 github 서비스에서 진행할 수 있다.
-9. pull request는 반드시 original 저장소의 브랜치와 fork한 자신의 저장소 브랜치 이름이 같아야 하며, 브랜치 이름은 자신의 github 아이디여야 한다.
-10. code review 및 push
-11. pull request를 통해 피드백을 받는다.
-12. 코드 리뷰 피드백에 대한 개선 작업을 하고 다시 PUSH한다.
-
-## 앞의 코드 리뷰 과정은 [영상 보기](https://www.youtube.com/watch?v=ZSZoaG0PqLg) 를 통해 참고 가능
-
-## 실습 중 모든 질문은 슬랙 채널에서...
