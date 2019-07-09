@@ -1,5 +1,19 @@
 # CardGame 카드게임
 ---
+### 객체 한줄요약
+- `Card` : `Suit - 마크 ,Rank - 등급 숫자` 를 표현하며 **비교연산** 대상
+- `CardHand`: `[Card]` 프로퍼티를 소유
+  - `Score` - 카드의 조합을 표현하는 `enum`
+  - `ScoreFactory` - `Score`의 팩토리객체
+    - `FactoryMethod` : `[Card]`로 조합의 가능성 검증 및 생성 하는 `init`들의 `enum` 반환형은 -> `Score?`
+- `CardDeck`: 초기 카드 52장을 지니고 게임에서 이용되는 객체
+- `MyPlayer` : `CardHand`를 소유한 게임 진행의 중심객체
+- `MyDealer` :  `MyPlayer`를 서브클래싱한 특수화 객체, 추가적으로 `draw()`동작 수행.
+- `PlayerEntry`: `[MyPlayer]`를 추상화한 객체, 게임에서는 각개인의 `MyPlayer`가 아닌 전체를 대상으로 진행하여 추상화하여 구성.
+
+
+
+
 ### 프로젝트를 진행하며 느낀점 
 객체에게서 데이터를 가져오는 것 보다는
 **객체가 직접 데이터로 연산을 하게끔** 외부에서 입력을 넣어준 뒤 결과값을 반환 받게하였다.
