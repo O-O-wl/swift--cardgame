@@ -8,8 +8,14 @@
     - `FactoryMethod` : `[Card]`로 조합의 가능성 검증 및 생성 하는 `init`들의 `enum` 반환형은 -> `Score?`
 - `CardDeck`: 초기 카드 52장을 지니고 게임에서 이용되는 객체
 - `MyPlayer` : `CardHand`를 소유한 게임 진행의 중심객체
-- `MyDealer` :  `MyPlayer`를 서브클래싱한 특수화 객체, 추가적으로 `draw()`동작 수행.
-- `PlayerEntry`: `[MyPlayer]`를 추상화한 객체, 게임에서는 각개인의 `MyPlayer`가 아닌 전체를 대상으로 진행하여 추상화하여 구성.
+- `MyDealer` :  `MyPlayer`를 서브클래싱한 특수화 객체, 추가적으로 `draw()`동작 수행
+- `PlayerEntry`: `[MyPlayer]`를 추상화한 객체, 게임에서는 각개인의 `MyPlayer`가 아닌 전체를 대상으로 진행하여 추상화하여 구성
+- `InputView` : 초기 게임 설정을 위한 입력을 받는 뷰 객체
+- `Setting`: 게임의 종류와 인원수의 입력을 추상화한 **DTO**
+   - `Mode`: 게임의 종류를 표현하는 `enum`
+   - `Entry`: 게임의 인원수를 표현하는 `enum`
+- `OutputView` : 게임의 상태와 결과, 에러메세지의 출력 방법을 알고 있는 뷰 객체 
+- `Game`: 게임의 구성원과 흐름을 알고 있는 객체
 
 
 
