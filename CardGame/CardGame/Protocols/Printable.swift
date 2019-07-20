@@ -13,6 +13,7 @@ protocol SingleValuePrintable {
     func print(logic: @escaping (String) -> Void)
 }
 
+
 protocol MultiValuesPrintable {
     
     func print(logic: @escaping (String, String) -> Void )

@@ -31,7 +31,11 @@ class PlayerEntry: Entry {
     }
     
     func draw(numOfCard: Int, completion: () -> (Void)) throws {
-        try Array(1...numOfCard).forEach { _ in try drawOne(); completion() }
+        try Array(1...numOfCard)
+            .forEach { _ in
+                try drawOne()
+                completion()
+        }
     }
     
     private func drawOne() throws {

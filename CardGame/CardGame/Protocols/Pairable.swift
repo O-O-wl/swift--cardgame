@@ -9,7 +9,7 @@
 import Foundation
 
 protocol Pairable where Self: GameElement {
-    associatedtype E = Self
+    typealias E = Self
     
     func isPair(with : E) -> Bool
 }
