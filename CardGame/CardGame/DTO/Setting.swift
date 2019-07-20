@@ -10,7 +10,7 @@ import Foundation
 
 struct Setting {
     let mode: Mode
-    let entry: Entry
+    let personnel: Personnel
     
     enum Mode: Int {
         case seven = 1
@@ -25,8 +25,7 @@ struct Setting {
             }
         }
     }
-    
-    enum Entry: Int {
+    enum Personnel: Int {
         case one = 1
         case two
         case three
@@ -38,11 +37,13 @@ struct Setting {
     }
     
     init?(mode: Int, entry: Int) {
-        guard let mode = Mode(rawValue: mode), let entry = Entry(rawValue: entry) else {
+        guard let mode = Mode(rawValue: mode), let entry = Personnel(rawValue: entry) else {
             return nil
         }
         self.mode = mode
-        self.entry = entry
+        self.personnel = entry
     }
+    
+    
     
 }
