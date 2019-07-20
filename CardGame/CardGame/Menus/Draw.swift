@@ -16,7 +16,7 @@ struct Draw<D: Deck>: Command {
     }
     
     mutating func execute() -> GameResult {
-        let card = self.deck.removeOne() as? Card
-        return GameResult.draw(card: card, remain: self.deck.count())
+        let card = deck.removeOne() as? Card
+        return GameResult.draw(card: card, remain: deck.count())
     }
 }

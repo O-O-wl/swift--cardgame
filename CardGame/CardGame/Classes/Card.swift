@@ -87,7 +87,7 @@ class Card: CustomStringConvertible, Equatable, GameElement {
     }
     
     var description: String {
-        return "\t\(self.suit)\(self.rank)"
+        return "\t\(suit)\(rank)"
     }
     
     

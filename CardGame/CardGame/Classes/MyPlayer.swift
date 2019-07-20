@@ -25,7 +25,7 @@ class MyPlayer: Player {
     }
     
     func clearHand() {
-        self.hand.clear()
+        hand.clear()
     }
     
 }
@@ -45,7 +45,7 @@ extension MyPlayer: Comparable {
 extension MyPlayer: SingleValuePrintable {
     
     func print(logic: @escaping (String) -> Void) {
-        logic(self.name)
+        logic(name)
     }
     
 }

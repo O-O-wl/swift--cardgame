@@ -16,8 +16,8 @@ struct Reset<D: Deck>: Command {
     }
     
     mutating func execute() -> GameResult {
-        self.deck.reset()
-        return  GameResult.reset(remain: self.deck.count())
+        deck.reset()
+        return  GameResult.reset(remain: deck.count())
     }
         
 }

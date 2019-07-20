@@ -16,7 +16,7 @@ struct Shuffle<D: Deck>: Command {
     }
     
     mutating func execute() -> GameResult {
-        self.deck.shuffle()
-        return GameResult.shuffle(remain: self.deck.count())
+        deck.shuffle()
+        return GameResult.shuffle(remain: deck.count())
     }
 }

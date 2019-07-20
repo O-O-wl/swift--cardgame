@@ -20,15 +20,15 @@ class CardHand: Hand {
     }
     
     func showAll() -> [Card] {
-        return self.cards
+        return cards
     }
     
     func count() -> Int {
-        return self.cards.count
+        return cards.count
     }
     
     func clear() {
-        self.cards.removeAll()
+        cards.removeAll()
     }
     
     

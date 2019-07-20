@@ -13,31 +13,31 @@ class CardDeck: Deck {
     
     private var cards = [Card]()
     private var isEmpty: Bool {
-        return self.count() <= 0
+        return count() <= 0
     }
     
     init() {
-        self.reset()
+        reset()
     }
     
     func count() -> Int {
-        return self.cards.count
+        return cards.count
     }
     
     func removeOne() -> Card? {
-        guard !self.isEmpty else { return nil }
-        let randomIndex = Int.random(in: 0..<self.count())
-        let card = self.cards.remove(at: randomIndex)
+        guard !isEmpty else { return nil }
+        let randomIndex = Int.random(in: 0..<count())
+        let card = cards.remove(at: randomIndex)
         return card
     }
     
     func shuffle() {
-        self.cards.shuffle()
+        cards.shuffle()
     }
     
     func reset() {
-        self.cards = CardFactory.createAll()
-        self.shuffle()
+        cards = CardFactory.createAll()
+        shuffle()
     }
     
 }
