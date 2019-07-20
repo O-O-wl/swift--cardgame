@@ -14,7 +14,7 @@ struct ScoreFactory: Factory {
     typealias OUT = Score
     
     static func create(_ input: [Card]) -> Score? {
-        let score = FactoryMethod.allCases.compactMap { $0.logic(input) }
+        let score = FactoryMethod.allCases.compactMap { $0.create(input) }
         guard let best = score.max() else { return nil }
         return best
     }
@@ -33,7 +33,7 @@ extension ScoreFactory {
         case straight
         case fourCard
         
-        var logic: ([Card]) -> Score? {
+        var create: ([Card]) -> Score? {
             switch self {
             case .highCard:
                 return createHighCard(_:)
