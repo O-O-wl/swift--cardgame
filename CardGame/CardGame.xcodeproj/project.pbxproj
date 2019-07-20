@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E0FF40122C6C710000D6E4A /* CardHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40022C6C710000D6E4A /* CardHand.swift */; };
-		0E0FF40322C6C860000D6E4A /* MyDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40222C6C860000D6E4A /* MyDealer.swift */; };
 		0E0FF40522C6CAAC000D6E4A /* GameException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40422C6CAAC000D6E4A /* GameException.swift */; };
 		0E0FF40722C6CBED000D6E4A /* GameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40622C6CBED000D6E4A /* GameInputView.swift */; };
-		0E0FF40922C6CC37000D6E4A /* MyDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40222C6C860000D6E4A /* MyDealer.swift */; };
-		0E0FF40A22C6CC64000D6E4A /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BF7A22C6243700DEB2F5 /* MyPlayer.swift */; };
 		0E0FF40B22C6CC6F000D6E4A /* GameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40622C6CBED000D6E4A /* GameInputView.swift */; };
 		0E0FF40C22C6CC75000D6E4A /* CardHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40022C6C710000D6E4A /* CardHand.swift */; };
 		0E0FF40D22C6CC80000D6E4A /* GameException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FF40422C6CAAC000D6E4A /* GameException.swift */; };
@@ -63,6 +60,10 @@
 		0E8517EB22C748A90073CE79 /* etc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8517E922C7489B0073CE79 /* etc.swift */; };
 		0E8517ED22C77EBD0073CE79 /* MyPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8517EC22C77EBD0073CE79 /* MyPlayerTests.swift */; };
 		0E8517EF22C77FD70073CE79 /* CardHandtests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8517EE22C77FD70073CE79 /* CardHandtests.swift */; };
+		0E8E2B7B22E34CBC00B93B68 /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E2B7A22E34CBC00B93B68 /* MyPlayer.swift */; };
+		0E8E2B7D22E34CD500B93B68 /* MyDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E2B7C22E34CD500B93B68 /* MyDealer.swift */; };
+		0E8E2B7E22E34D0100B93B68 /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E2B7A22E34CBC00B93B68 /* MyPlayer.swift */; };
+		0E8E2B7F22E34D0300B93B68 /* MyDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E2B7C22E34CD500B93B68 /* MyDealer.swift */; };
 		0EB142D622CB5201000CD51D /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB142D522CB5201000CD51D /* CardTests.swift */; };
 		0EB142D822CBF2DF000CD51D /* Pairable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB142D722CBF2DF000CD51D /* Pairable.swift */; };
 		0EB142D922CBF378000CD51D /* Pairable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB142D722CBF2DF000CD51D /* Pairable.swift */; };
@@ -74,7 +75,6 @@
 		0EB142E222CCA755000CD51D /* ScoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB142E022CCA5AB000CD51D /* ScoreFactory.swift */; };
 		0EB142EA22CCD2CB000CD51D /* ScoreFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB142E922CCD2CB000CD51D /* ScoreFactoryTests.swift */; };
 		0EE2BF7922C6241100DEB2F5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BF7822C6241100DEB2F5 /* Player.swift */; };
-		0EE2BF7B22C6243700DEB2F5 /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BF7A22C6243700DEB2F5 /* MyPlayer.swift */; };
 		0EE2BF7D22C6244800DEB2F5 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BF7C22C6244800DEB2F5 /* Dealer.swift */; };
 		0EE2BF7F22C625F300DEB2F5 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BF7E22C625F300DEB2F5 /* Hand.swift */; };
 		0EE2BF8122C6279900DEB2F5 /* GameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2BF8022C6279900DEB2F5 /* GameElement.swift */; };
@@ -101,7 +101,6 @@
 
 /* Begin PBXFileReference section */
 		0E0FF40022C6C710000D6E4A /* CardHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHand.swift; sourceTree = "<group>"; };
-		0E0FF40222C6C860000D6E4A /* MyDealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyDealer.swift; path = CardGame/Classes/MyDealer.swift; sourceTree = SOURCE_ROOT; };
 		0E0FF40422C6CAAC000D6E4A /* GameException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameException.swift; sourceTree = "<group>"; };
 		0E0FF40622C6CBED000D6E4A /* GameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInputView.swift; sourceTree = "<group>"; };
 		0E1D120222C48DF200878644 /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
@@ -129,6 +128,8 @@
 		0E8517E922C7489B0073CE79 /* etc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etc.swift; sourceTree = "<group>"; };
 		0E8517EC22C77EBD0073CE79 /* MyPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayerTests.swift; sourceTree = "<group>"; };
 		0E8517EE22C77FD70073CE79 /* CardHandtests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHandtests.swift; sourceTree = "<group>"; };
+		0E8E2B7A22E34CBC00B93B68 /* MyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
+		0E8E2B7C22E34CD500B93B68 /* MyDealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDealer.swift; sourceTree = "<group>"; };
 		0EB142D522CB5201000CD51D /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		0EB142D722CBF2DF000CD51D /* Pairable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pairable.swift; sourceTree = "<group>"; };
 		0EB142DA22CBF6A4000CD51D /* Linkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linkable.swift; sourceTree = "<group>"; };
@@ -136,7 +137,6 @@
 		0EB142E022CCA5AB000CD51D /* ScoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreFactory.swift; sourceTree = "<group>"; };
 		0EB142E922CCD2CB000CD51D /* ScoreFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreFactoryTests.swift; sourceTree = "<group>"; };
 		0EE2BF7822C6241100DEB2F5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		0EE2BF7A22C6243700DEB2F5 /* MyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPlayer.swift; path = CardGame/Classes/MyPlayer.swift; sourceTree = SOURCE_ROOT; };
 		0EE2BF7C22C6244800DEB2F5 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		0EE2BF7E22C625F300DEB2F5 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		0EE2BF8022C6279900DEB2F5 /* GameElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElement.swift; sourceTree = "<group>"; };
@@ -166,26 +166,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E1D120822C49C4D00878644 /* Enums */ = {
+		0E1D120822C49C4D00878644 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
 				0E1D120922C49C5900878644 /* GameResult.swift */,
 				0EB142DD22CBFAF1000CD51D /* Score.swift */,
 			);
-			path = Enums;
+			path = Enum;
 			sourceTree = "<group>";
 		};
-		0E5940B022C3338200B54014 /* Views */ = {
+		0E5940B022C3338200B54014 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0E5940B122C3339200B54014 /* InputView.swift */,
 				0E0FF40622C6CBED000D6E4A /* GameInputView.swift */,
 				0E8517DF22C6FC850073CE79 /* OutputView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		0E5940B622C335BF00B54014 /* Protocols */ = {
+		0E5940B622C335BF00B54014 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				0E5940C622C3530F00B54014 /* Command.swift */,
@@ -200,36 +200,36 @@
 				0EB142DA22CBF6A4000CD51D /* Linkable.swift */,
 				0E7DAEEE22CE5B59005FDE80 /* Entry.swift */,
 			);
-			path = Protocols;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
-		0E5940CB22C353DD00B54014 /* Exceptions */ = {
+		0E5940CB22C353DD00B54014 /* Exception */ = {
 			isa = PBXGroup;
 			children = (
 				0E5940CC22C353F300B54014 /* InputException.swift */,
 				0E0FF40422C6CAAC000D6E4A /* GameException.swift */,
 			);
-			path = Exceptions;
+			path = Exception;
 			sourceTree = "<group>";
 		};
-		0E5940DF22C3648C00B54014 /* Menus */ = {
+		0E5940DF22C3648C00B54014 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				0E5940E022C3649900B54014 /* Reset.swift */,
 				0E5940E222C364A300B54014 /* Shuffle.swift */,
 				0E5940E422C364AA00B54014 /* Draw.swift */,
 			);
-			path = Menus;
+			path = Menu;
 			sourceTree = "<group>";
 		};
-		0E5940EC22C36F6C00B54014 /* Factorys */ = {
+		0E5940EC22C36F6C00B54014 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
 				0E5940ED22C36FAD00B54014 /* CommandFactory.swift */,
 				0E1D120222C48DF200878644 /* CardFactory.swift */,
 				0EB142E022CCA5AB000CD51D /* ScoreFactory.swift */,
 			);
-			path = Factorys;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		0E70549622CF035B00753E6C /* DTO */ = {
@@ -264,19 +264,19 @@
 			path = CardGameTests;
 			sourceTree = "<group>";
 		};
-		0EF086AB22C2223200FC080E /* Classes */ = {
+		0EF086AB22C2223200FC080E /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				0E5940CF22C3581200B54014 /* DeckActions.swift */,
-				0EE2BF7A22C6243700DEB2F5 /* MyPlayer.swift */,
-				0E0FF40222C6C860000D6E4A /* MyDealer.swift */,
 				0E5940B422C3343C00B54014 /* CardDeck.swift */,
 				0EF086AC22C2223F00FC080E /* Card.swift */,
 				0E0FF40022C6C710000D6E4A /* CardHand.swift */,
 				0E8517E222C732BD0073CE79 /* Game.swift */,
 				0E7DAEEC22CE5A88005FDE80 /* PlayerEntry.swift */,
+				0E8E2B7A22E34CBC00B93B68 /* MyPlayer.swift */,
+				0E8E2B7C22E34CD500B93B68 /* MyDealer.swift */,
 			);
-			path = Classes;
+			path = Class;
 			sourceTree = "<group>";
 		};
 		839DA8D81F8CDBC9009E05F3 = {
@@ -302,13 +302,13 @@
 			children = (
 				0E70549622CF035B00753E6C /* DTO */,
 				0E8517E822C748920073CE79 /* Util */,
-				0E1D120822C49C4D00878644 /* Enums */,
-				0E5940EC22C36F6C00B54014 /* Factorys */,
-				0E5940DF22C3648C00B54014 /* Menus */,
-				0E5940CB22C353DD00B54014 /* Exceptions */,
-				0E5940B622C335BF00B54014 /* Protocols */,
-				0E5940B022C3338200B54014 /* Views */,
-				0EF086AB22C2223200FC080E /* Classes */,
+				0E1D120822C49C4D00878644 /* Enum */,
+				0E5940EC22C36F6C00B54014 /* Factory */,
+				0E5940DF22C3648C00B54014 /* Menu */,
+				0E5940CB22C353DD00B54014 /* Exception */,
+				0E5940B622C335BF00B54014 /* Protocol */,
+				0E5940B022C3338200B54014 /* View */,
+				0EF086AB22C2223200FC080E /* Class */,
 				839DA8E41F8CDBCA009E05F3 /* main.swift */,
 			);
 			path = CardGame;
@@ -413,10 +413,10 @@
 				0E5940BF22C3373000B54014 /* main.swift in Sources */,
 				0EE2BF8522C6284A00DEB2F5 /* Player.swift in Sources */,
 				0EE2BF8222C6284300DEB2F5 /* GameElement.swift in Sources */,
-				0E0FF40A22C6CC64000D6E4A /* MyPlayer.swift in Sources */,
 				0E5940C822C3534700B54014 /* Command.swift in Sources */,
 				0EB142D922CBF378000CD51D /* Pairable.swift in Sources */,
 				0E0FF40C22C6CC75000D6E4A /* CardHand.swift in Sources */,
+				0E8E2B7F22E34D0300B93B68 /* MyDealer.swift in Sources */,
 				0E8517DB22C6F68C0073CE79 /* MyDealerTests.swift in Sources */,
 				0E5940CE22C353FA00B54014 /* InputException.swift in Sources */,
 				0E5940BE22C3372C00B54014 /* Card.swift in Sources */,
@@ -430,7 +430,6 @@
 				0E7DAEF122CE5EAC005FDE80 /* Entry.swift in Sources */,
 				0E5940BD22C3372900B54014 /* InputView.swift in Sources */,
 				0E7DAEF022CE5E6C005FDE80 /* PlayerEntry.swift in Sources */,
-				0E0FF40922C6CC37000D6E4A /* MyDealer.swift in Sources */,
 				0E8517E722C747620073CE79 /* Setting.swift in Sources */,
 				0EE2BF8322C6284600DEB2F5 /* Hand.swift in Sources */,
 				0E5940EF22C370C700B54014 /* CommandFactory.swift in Sources */,
@@ -446,6 +445,7 @@
 				0E1D120B22C49C8900878644 /* GameResult.swift in Sources */,
 				0EE2BF8422C6284800DEB2F5 /* Dealer.swift in Sources */,
 				0E5940E822C3680C00B54014 /* Reset.swift in Sources */,
+				0E8E2B7E22E34D0100B93B68 /* MyPlayer.swift in Sources */,
 				0E8517E422C734740073CE79 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,9 +458,9 @@
 				0EE2BF7D22C6244800DEB2F5 /* Dealer.swift in Sources */,
 				0EB142DE22CBFAF1000CD51D /* Score.swift in Sources */,
 				0E5940CD22C353F300B54014 /* InputException.swift in Sources */,
+				0E8E2B7B22E34CBC00B93B68 /* MyPlayer.swift in Sources */,
 				0E5940D022C3581200B54014 /* DeckActions.swift in Sources */,
 				0E5940E522C364AA00B54014 /* Draw.swift in Sources */,
-				0EE2BF7B22C6243700DEB2F5 /* MyPlayer.swift in Sources */,
 				0E0FF40722C6CBED000D6E4A /* GameInputView.swift in Sources */,
 				0E1D120A22C49C5900878644 /* GameResult.swift in Sources */,
 				0E8517EA22C7489B0073CE79 /* etc.swift in Sources */,
@@ -481,7 +481,7 @@
 				0E7DAEEF22CE5B59005FDE80 /* Entry.swift in Sources */,
 				0E5940E122C3649900B54014 /* Reset.swift in Sources */,
 				0E8517E322C732BD0073CE79 /* Game.swift in Sources */,
-				0E0FF40322C6C860000D6E4A /* MyDealer.swift in Sources */,
+				0E8E2B7D22E34CD500B93B68 /* MyDealer.swift in Sources */,
 				0EB142E122CCA5AB000CD51D /* ScoreFactory.swift in Sources */,
 				0E8517E622C747510073CE79 /* Setting.swift in Sources */,
 				0EE2BF7922C6241100DEB2F5 /* Player.swift in Sources */,

@@ -56,7 +56,5 @@ extension MyPlayer: MultiValuesPrintable {
         let logic = { logic(self.name,$0) }
         self.hand.print(logic: logic)
     }
-
+    
 }
-
-
